@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  
+  <head>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="js/slippry.js"></script>
+    <link rel="stylesheet" href="css/slippry.css" />
+    <script>
+    jQuery(document).ready(function(){
+      jQuery('#shop-demo').slippry()
+    });
+    </script>
+
+
+  </head>
+
+  <body>
+    <div>
+     <section class="shop">
+      <h2 class="restricted-width">Shop</h2>
+        <section id="shop-demo">
+          <article title="Strawberries">
+            <div class="image-content"><img src="/assets/img/image-5.jpg" alt="demo1_2" class="product-image"></div>
+            <div class="product-info">
+              <p>Everyone loves Strawberries.</p>
+              <a href="#!" class="button-link more-info">More information</a><a href="#!" class="button-link buy-now">Buy now</a>
+            </div>
+          </article>
+          <article title="White flowers">
+            <div class="image-content"><img src="/assets/img/image-6.jpg" alt="demo1_2" class="product-image"></div>
+            <div class="product-info">
+              <p>White flowers are for peace.</p>
+              <a href="#!" class="button-link more-info">More information</a><a href="#!" class="button-link buy-now">Buy now</a>
+            </div>
+          </article>
+          <article title="Beetroot and goat's cheese cake">
+            <div class="image-content"><img src="/assets/img/image-7.jpg" alt="demo1_2" class="product-image"></div>
+            <div class="product-info">
+              <p>Savoury cheesecake? What?! It sounds amazing to me!</p>
+              <a href="#!" class="button-link more-info">More information</a><a href="#!" class="button-link buy-now">Buy now</a>
+            </div>
+          </article>
+          <article title="Yellow flowers">
+            <div class="image-content"><img src="/assets/img/image-8.jpg" alt="demo1_2" class="product-image"></div>
+            <div class="product-info">
+              <p>Thinking of giving someone some red roses?</p>
+              <a href="#!" class="button-link more-info">More information</a><a href="#!" class="button-link buy-now">Buy now</a>
+            </div>
+          </article>
+        </section>
+         <h2 class="product-name"></h2>
+      </section>
+    </div>
+
+    <script>
+        jQuery('#shop-demo').slippry({
+      // general elements & wrapper
+      slippryWrapper: '<div class="sy-box shop-slider" />', // wrapper to wrap everything, including pager
+      elements: 'article', // elments cointaining slide content
+
+      // options
+      adaptiveHeight: false, // height of the sliders adapts to current slide
+      start: 2, // num (starting from 1), random
+      loop: false, // first -> last & last -> first arrows
+      captionsSrc: 'article',
+      captions: 'custom', // Position: overlay, below, custom, false
+      captionsEl: '.product-name',
+
+      // pager
+      pager: false,
+
+      // transitions
+      slideMargin: 20, // spacing between slides (in %)
+      useCSS: true,
+      transition: 'horizontal',
+
+      // slideshow
+      auto: false
+    });
+    </script>
+
+
+
+  </body>
+</html>
